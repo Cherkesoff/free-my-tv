@@ -72,6 +72,10 @@ final class HomeMode {
         // Xiaomi
         "com.miui.tv.analytics", "com.xiaomi.statistic",                              // telemetry
         "com.mitv.tvhome.mitvplus", "com.xm.webcontent",                              // Mi TV+ promo channels, promo web content
+        "com.mitv.tvhome.atv",                                                        // PatchWall: ~120 MB in the background on 1.7 GB
+        "com.google.android.apps.mediashell",                                         // Chromecast built-in: unused here
+        "com.mitv.milinkservice", "com.xiaomi.mitv.smartshare",                       // MiLink discovery, Miracast/MiPlay: unused here
+        "com.xiaomi.wfdsinkhelperservice",                                            // Miracast helper
     };
 
     /** The voice assistant, only with disable_assistant=true in config.properties (the mic button stops working). */
@@ -84,7 +88,7 @@ final class HomeMode {
         "com.tcl.UpdatePeripheral", "com.tcl.dashboard", "com.tcl.suspension", "com.tcl.providers.config",
         "com.tcl.gamebar", "com.tcl.airplay2", "com.mirakulo.astrotv.service", "com.tcl.initsetup",
         "com.tcl.useragreement", "com.tcl.factory.view", "com.tcl.guard", "com.tcl.t_solo",
-        "com.google.android.gms", "com.google.android.gsf", "com.android.vending", "com.google.android.apps.mediashell",
+        "com.google.android.gms", "com.google.android.gsf", "com.android.vending",
         "com.google.android.tv.remote.service", "com.google.android.inputmethod.latin", "com.google.android.webview",
         "com.android.tv.settings", "com.android.systemui", "android", PKG,
         // Philips (TP Vision) and MediaTek: system, Ambilight, live TV and inputs, setup, factory menu (#11)
@@ -105,8 +109,7 @@ final class HomeMode {
         // Xiaomi (MediaTek): system service, remote pairing, live TV, quick settings, child lock, updates, casting
         "mitv.service", "com.mi.bluetooth", "com.mitv.livetv.ci_mediatek", "com.xiaomi.tvqs.overseas",
         "com.mitv.tvlock", "com.xiaomi.mitv.updateservice", "com.xiaomi.android.tvsetup.partnercustomizer",
-        "com.mitv.overseaservice", "com.xiaomi.mitv.tvmanager", "com.xiaomi.wfdsinkhelperservice",
-        "com.mitv.milinkservice", "com.xiaomi.mitv.smartshare", "android.autoinstalls.config.xiaomi.amelie"));
+        "com.mitv.overseaservice", "com.xiaomi.mitv.tvmanager", "android.autoinstalls.config.xiaomi.amelie"));
 
     /** One switch at a time (jobs can overlap: a boot check and a button press). */
     private static final Object RUN = new Object();
